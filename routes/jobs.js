@@ -1,4 +1,5 @@
 const express = require("express");
+const testUser = require("../middleware/testUser");
 
 const router = express.Router();
 const {
@@ -7,10 +8,13 @@ const {
   getAllJobs,
   updateJob,
   getJob,
+  showStats,
 } = require("../controllers/jobs");
-const testUser = require("../middleware/testUser");
 
 router.route("/").post(testUser, createJob).get(getAllJobs);
+
+// router.route("/stats").get(showStats);
+router.route("/stats").get(showStats);
 
 router
   .route("/:id")
