@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "populate": "node db/populate.js"
   },
   "repository": "https://github.com/MaNaSDeo/nodeJS-basic-learning-jobster-api.git",
   "author": "MaNaSDeo <rmnslogin@gmail.com>",
